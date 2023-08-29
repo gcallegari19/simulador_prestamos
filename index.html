@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Prestamo Personal</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="icons/dollar.svg" type="favicon.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <!-- Header - Menu -->
+    <header>
+        <nav class="navbar navbar-expand-lg boxed-nav static-nav fixedmenu">
+            <div class="container-fluid logo">
+                <a class="navbar-brand" href="index.html">
+                    <img src="icons/dollar.svg"alt="logo">
+                </a>
+                <button class="navbar-toggler collapsed" id="xenav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLigth" aria-controls="navbarLigth" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div id="navbarLigth" class="navbar-collapse collapse justify-content-end menu">                              
+                      <ul class="navbar-nav ml-auto">                            
+                          <li class="nav-item">
+                              <a class="nav-link" href="#Inicio">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#Simula-tu-prestamo">Simula tu préstamo</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#Por-Que-elegirnos">Por qué elegirnos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#Contactanos">Contactanos</a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+        </nav>
+    </header>
+
+
+    <!-- Seccion inicio carrousel -->
+    <section id="Inicio">
+        <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/prestamo-4.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-center">
+                        <h1>Cotiza tu préstamo con solo un click</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/prestamo-5.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-center">
+                        <h1>Evaluación en el acto</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/prestamos-personales.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption text-center">
+                        <h1>Experiencia Comprobable</h1>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Seccion cotizador -->
+    <main class="container text-center" id="Simula-tu-prestamo">
+        <div class="col-md-12">
+            <div class="row text__cotizador">
+                <h1>Simula tu Préstamo</h1>
+                <div class="col-md-6">
+                    <form class="formulario-cotizador" id="cotizador">
+                        <div class="contenedor-texto">
+                            <label for="nombre">Nombre y Apellido:</label>
+                            <input class="form-control" type="text" size="50" maxlength="100" id="nombre" placeholder="Ingresa tu nombre y apellido"/>
+                        </div>
+                        <div class="contenedor-texto">
+                            <label for="email">Email:</label>
+                            <input class="form-control" type="text" size="50" maxlength="100" id="email" placeholder="Ingresa un correo electronico"/>
+                        </div>
+                        <div class="contenedor-texto">
+                            <label for="tipoPrestamo">Tipo de Préstamo:</label>
+                            <select class="form-select form-select-me" id="tipoPrestamo" aria-label=".form-select-sm example">
+                                <option selected>Elegi tipo de Préstamo</option>
+                                <option value="Personal">Préstamo Personal</option>
+                                <option value="Hipotecario">Préstamo Hipotecario</option>
+                                <option value="Automotriz">Préstamo Automotriz</option>
+                            </select>
+                        </div>  
+                        <div class="contenedor-texto">
+                            <label for="montoPrestamo">Monto del préstamo:</label>
+                            <input class="form-control" type="text" size="50" maxlength="100" id="montoPrestamo" placeholder="0.00" min="1"/>
+                        </div>
+                        <div class="contenedor-texto">
+                            <label for="cuotas">Cuotas mensuales:</label>
+                            <input class="form-control" type="text" size="50" maxlength="100" id="cuotas" placeholder="0" min="1" />
+                        </div>
+                        <div class="contenedor-texto">
+                            <label for="tasaInteres">Tasa de Interes:</label>
+                            <input class="form-control" type="text" size="50" maxlength="100" id="tasaInteres" placeholder="%" step="0.01" min="0.01" />
+                        </div>   
+                        <div class="botones d-flex justify-content-between">
+                            <button type="submit" class="btn btn-secondary" id="btnConsultar">Consultar</button>
+                            <button type="submit" class="btn btn-secondary" id="btnNuevaConsul">Nueva Consulta</button>
+                            <button type="submit" class="btn btn-secondary" id="btnEnvio">Enviarme Consulta</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div id="historialConsultas"></div>
+                </div>
+             
+            </div>
+            
+            <!-- Desarrollo de prestamo -->
+            <div class="col-12 align-self-center" id="genera-tabla" >
+                <h4>Desarrollo del Préstamo</h4>
+                <div class="table-responsive">
+                    <table class="table" id="cotizadorTabla">
+                        <thead>
+                            <tr>
+                                <th>Nro Cuota</th>
+                                <th>Saldo Capital</th>
+                                <th>Cuota Pura</th>
+                                <th>Capital</th>
+                                <th>Interés</th>
+                                <th>Iva</th>
+                                <th>Cuota Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTabla"></tbody>
+                    </table>
+                </div>
+                <!-- Indicador de carga -->
+                <div id="indicador-carga" class="indicador-carga-oculto">Cargando... <img src="icons/icon-loading.png" width="3%"></div> 
+            </div>
+
+        </div>
+    </main>
+
+    <section id="Por-Que-elegirnos">
+        <div class="container container__elegirnos container__card-primary">
+            <div class="elegirnos card__primary">
+                <div class="row text__elegirnos text__card-primary">
+                    <h1>Por qué elegirnos</h1>
+                </div>
+                <div class="container__card-elegirnos container__box-cardPrimary">
+                    <div class="card__elegirnos box__card-primary">
+                        <img src="icons/clock.svg" alt="">
+                        <h3>Rápido</h3>
+                        <p>Un click te separa de tu préstamo.</p>
+                    </div>
+                    <div class="card__elegirnos box__card-primary">
+                        <img src="icons/security.svg" alt="">
+                        <h3>Seguro</h3>
+                        <p>Tus datos están protegidos</p>
+                    </div>
+                    <div class="card__elegirnos box__card-primary">
+                        <img src="icons/mobile.svg" alt="">
+                        <h3>Online</h3>
+                        <p>Tú préstamo desde donde estes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de Contacto -->
+    <section class="container container__contacto text-center" id="Contactanos">
+        <div class="col-md-12">
+            <div class="row text__contacto">
+                <h1>Contactanos</h1>
+                <div class="col-md-6">
+                    <div class="donde_estamos" >
+                        <h4>¿Dónde estamos?</h4>
+                        <div id="map">
+
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <form action="form.php" method="post" class="formulario-contacto" id="contacto">
+                    <div class="contenedor-texto">
+                        <label for="nombre">Nombre:</label>
+                        <input class="form-control" type="text" size="50" maxlength="100" name="nombre" id="nombre"/>
+                    </div>
+                    <div class="contenedor-texto">
+                        <label for="email">Email:</label>
+                        <input class="form-control" type="text" size="50" maxlength="100" name="email" id="email"/>
+                    </div>
+                    <div class="contenedor-texto">
+                        <label for="telefono">Telefono:</label>
+                        <input class="form-control" type="text" size="50" maxlength="100" name="telefono" id="telefono" />
+                    </div>   
+                    <div class="contenedor-texto">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" name="mensaje" id="mensaje" cols="38" rows="8"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" id="btnEnvioContacto">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- Fin seccion consulta -->
+    </section>
+
+    <!-- Flecha para volver al inicio -->
+    <a href="#top" id="back-to-top" title="Volver arriba">
+        <img src="icons/icons8-flecha-60.png" alt="">
+    </a>
+
+
+    <!-- footer -->
+    <footer id="site-footer" class="padding_half">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-12 col-sm-12 text-center">
+                <img src="icons/dollar.svg" width="50px" alt="logo" class="footer-logo bottom45 wow fadeInUp" data-wow-delay="300ms">
+                 <p class="copyrights wow fadeInUp" data-wow-delay="400ms"> © Copyright 2023 | Todos los derechos reservados | Buenos Aires, Argentina. </p>
+              </div>
+           </div>
+        </div>
+     </footer>
+   
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- JS -->
+    <script src="script.js"></script>
+    <!-- API google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyEeQMf9TMtxR2uhrH1BscRGwJm5Ej9wI&callback=iniciarMap">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

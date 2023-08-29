@@ -1,0 +1,350 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Estilos encabezado */
+header{
+    height: 100%;
+    padding: 5px;
+    background-color: blanchedalmond;
+    background-attachment: fixed;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img{
+    width: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5px;
+    position: relative;
+}
+
+/* Estilos seccion inicio - Carrousel*/
+.carousel {
+    min-height: 100%;
+}
+
+#Inicio{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    z-index: 20;
+}
+
+.carousel-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#Inicio h1 {
+    font-size: 5vw;
+    color: black;
+    text-shadow: 4px 4px 0 #abb7cf;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilos cotizador */
+.container-cotizador{
+    min-width: 40%;
+    padding: 0px 25px;
+    background-color: white;
+    background-attachment: fixed;
+    margin: 10px 300px 10px 300px;
+    height: 100%;
+}
+
+.container-cotizador h1{
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+
+.col-sm-6 {
+    margin: 15px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row h1{
+   font-size: 7vw;
+   padding: 10px;
+}
+
+.col-12 {
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 80px;
+}
+
+div #historialConsultas {
+    padding-top: 50px;
+}
+
+.indicador-carga-visible {
+    display: block;
+    font-size: 3vh;
+}
+
+.indicador-carga-oculto {
+    display: none;
+}
+
+.formulario-cotizador{
+    padding-top: 20px;
+    width: 100%;
+}
+
+#cotizador .formulario-cotizador label,
+.formulario-cotizador input,
+.formulario-cotizador select {
+    max-width: 100%;
+    font-size: small;
+}
+
+.contenedor-texto {
+    margin-top: 15px; 
+    min-width: 50px;
+    max-width: 100%;
+    padding-bottom: 8px;
+}
+
+.formulario-cotizador button {
+    margin-top: 15px;
+    padding: 5px;
+    font-size: small;
+    border: none;
+    background: rgb(148, 146, 146);
+    position: relative;
+}
+
+.formulario-cotizador button .btn {
+    height: 30px;
+    padding: 30px 20px;
+    background-color: gray;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
+}
+
+.col-12 h4{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    text-decoration: underline;
+    font-size: large;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #fdfef7;
+    margin: auto;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.table th, .table td {
+    font-size: small;
+    padding: 8px;
+}
+
+/*Seccion Elegirnos*/
+#Por-Que-elegirnos{
+    background-image: url("images/imagen_4.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
+}
+
+.container__card-primary{
+    padding-top: 40px;
+}
+
+.card__primary{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.text__card-primary{
+    max-width: 800px;
+    margin: auto;
+}
+
+.container__box-cardPrimary{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.box__card-primary{
+    max-width: 350px;
+    padding: 40px 40px;
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    margin: 10px;
+    transition: all 300ms;
+}
+
+.box__card-primary:hover{
+    border: 1px solid black;
+}
+
+.box__card-primary h3{
+    margin-top: 5px;
+}
+
+.box__card-primary p{
+    margin-top: 20px;
+}
+
+.card__elegirnos img{
+    width: 50px;
+}
+
+/* Seccion Contacto */
+.container__contacto{
+    padding-top: 15px;
+}
+
+.text__contacto h1{
+    padding-bottom: 40px;
+}
+
+.donde_estamos{
+    padding-top: 15px;
+}
+
+.donde_estamos h3{
+    padding-bottom: 22px;
+}
+
+.donde_estamos img{
+    width: 100%;
+}
+
+#map{
+    height: 500px;
+    width: 100%;
+}
+
+.contenedor-texto {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contacto .form-control{
+    padding: 15px;
+}
+
+#contacto .form-control:not(textarea) {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
+}
+
+#contacto .form-control:not(textarea):focus {
+    border-color: black;
+    outline: none; 
+}
+
+#btnEnvioContacto{
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+
+/* Estilos back to top*/
+
+#back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 100px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+#back-to-top:hover{
+    opacity: 0.8;
+}
+
+footer{
+    background-color: blanchedalmond;
+    padding-top: 40px;
+}
+
+footer p{
+    font-size: 3vh;
+
+}
+
+@media (min-width: 1200px) {
+    .row h1 {
+       font-size: 90px; /* Tamaño de fuente fijo en pantallas grandes */
+    }
+ }
